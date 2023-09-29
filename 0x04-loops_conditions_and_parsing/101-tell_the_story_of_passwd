@@ -1,13 +1,15 @@
 #!/bin/bash
-# This script tells the story of each user in the /etc/passwd file.
 
-while IFS=':' read -r username _ uid _ home shell; do
-    passcode=$(grep -E "^$username:" /etc/shadow | cut -d ':' -f 2)
+IFS=":"
 
-    echo "The user $username is part of the $uid gang, lives in $home, and rides $shell."
+while read -r username x userid groupid user_info home_directory shell; do
+    password=$(awk -F'[/:]' '{print $2}' <<< "$x")
+    full_name=$(cut -d ',' -f 5 <<< "$user_info")
 
-    if [ -n "$passcode" ]; then
-        echo "$uid's place is protected by the passcode $passcode."
-    fi
+    echo "The user $username is part of the $groupid gang, lives in
+    $home_directory and rides $shell. $userid's place is protected by the passcode 
+    $password, more info about the user here: $full_name"
 done < /etc/passwd
+
+IFS=$' \t\n'
 
