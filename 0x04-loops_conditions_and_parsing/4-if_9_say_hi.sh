@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
-# display using while and if 
- 
-the_count=1
-while (( the_count <= 10 ));
-do
-	echo "Best School"
-	if (( the_count == 9 ));
-	then	
-		echo "Hi"
-	fi
-	((the_count++))
+# This script displays "Best School" 10 times, with "Hi" on the 9th iteration
+
+counter=1
+
+while [ $counter -le 10 ]; do
+  if [ $counter -eq 9 ]; then
+    echo "Best School"
+    echo "Hi"
+  else
+    echo "Best School"
+  fi
+  ((counter++))
 done
+
