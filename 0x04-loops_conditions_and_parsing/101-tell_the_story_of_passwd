@@ -1,0 +1,13 @@
+#!/bin/bash
+# This script tells the story of each user in the /etc/passwd file.
+
+while IFS=':' read -r username _ uid _ home shell; do
+    passcode=$(grep -E "^$username:" /etc/shadow | cut -d ':' -f 2)
+
+    echo "The user $username is part of the $uid gang, lives in $home, and rides $shell."
+
+    if [ -n "$passcode" ]; then
+        echo "$uid's place is protected by the passcode $passcode."
+    fi
+done < /etc/passwd
+
