@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # display using while and if 
  
-counter=1
-while (( counter <= 10 ));
+the_count=1
+while (( the_count <= 10 ));
 do
 	echo "Best School"
-	if (( counter == 9 ));
+	if (( the_count == 9 ));
 	then	
 		echo "Hi"
 	fi
-	((counter++))
+	((the_count++))
 done
