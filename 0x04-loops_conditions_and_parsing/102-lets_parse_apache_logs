@@ -1,3 +1,5 @@
 #!/bin/bash
-awk '{print $1, $9}' < apache-access.log
+
+# Use awk to extract and print IP and HTTP status code
+awk '{print $1, $9}' apache-access.log
 

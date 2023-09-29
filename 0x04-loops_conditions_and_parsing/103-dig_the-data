@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Use awk to group and count occurrences, then sort and print
+awk '{ count[$1 " " $9]++ } END { for (key in count) print count[key], key | "sort -rn" }' apache-access.log
+
