@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+Web stack debugging #1
+=======
 0x0E. Web stack debugging #1
 DevOps
 SysAdmin
@@ -130,3 +133,4 @@ Directory: 0x0E-web_stack_debugging_1
 File: 1-debugging_made_short
 
 Copyright © 2024 ALX, All rights reserved.
+>>>>>>> 395bc65e92eddaf93b25060c81fbe0521cd31cce

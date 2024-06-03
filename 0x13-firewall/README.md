@@ -1,0 +1,2 @@
+FIREWALL
+A firewall is a **hardware or software security system** designed to monitor and control incoming and outgoing network traffic based on predetermined security rules. ats primary function is to establish a barrier between a trusted internal network and untrusted external networks, such as the internet, to prevent unauthorized access and protect against various cyber threats. Firewalls can be implemented as hardware devices, software applications, or a combination of both.
