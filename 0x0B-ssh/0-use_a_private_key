@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # uses ssh to connect to your server using private key and user ubuntu
 chmod 600 ~/.ssh/school
-ssh -i ~/.ssh/school ubuntu@3.84.222.15
+ssh -i ~/.ssh/school ubuntu@172.17.0.33
